@@ -1,0 +1,14 @@
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LMS.deps.json
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LMS.runtimeconfig.json
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LMS.dll
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LMS.pdb
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.csproj.AssemblyReference.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.AssemblyInfoInputs.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.AssemblyInfo.cs
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.csproj.CoreCompileInputs.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.dll
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\refint\LMS.dll
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.pdb
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LMS.genruntimeconfig.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\ref\LMS.dll

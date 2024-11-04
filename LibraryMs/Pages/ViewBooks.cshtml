@@ -1,0 +1,183 @@
+﻿@* @page
+@model ViewBooksModel
+@{
+    ViewData["Title"] = "View Books";
+}
+
+<div class="text-center mb-4">
+    <h2>All Books</h2>
+</div>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date Added</th>
+                <th>Rack</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Date</td>
+                    <td>@book.RackId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Issued Books</h3>
+    <ul>
+        @foreach (var (book, duration) in Model.IssuedBooks)
+        {
+            <li>
+                Title: @book.Title, Duration: @duration days
+            </li>
+        }
+    </ul>
+</div>
+ *@
+
+@* 
+ @page
+@model ViewBooksModel
+@{
+    ViewData["Title"] = "View Books";
+}
+
+<div class="text-center mb-4">
+    <h2>All Books</h2>
+</div>
+
+<div class="container">
+    <!-- Table for All Books -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date Added</th>
+                <th>Rack</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@book.RackId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Issued Books</h3>
+    <!-- Table for Issued Books -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Duration (Days)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var (book, duration) in Model.IssuedBooks)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@duration</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+ *@
+
+ @page
+@model ViewBooksModel
+@{
+    ViewData["Title"] = "View Books";
+}
+
+<div class="text-center mb-4">
+    <h2>All Books</h2>
+</div>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date Added</th>
+                <th>Rack</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@book.RackId</td>
+                    <td>
+                        <form method="post" asp-page-handler="RemoveBook">
+                            <input type="hidden" name="bookId" value="@book.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Issued Books</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Issued To (Student ID)</th>
+                <th>Issued On</th>
+                <th>Expiry Date</th>
+                <th>Duration (Days)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var (book, studentId, issueDate, expiryDate) in Model.IssuedBooks)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@studentId</td>
+                    <td>@issueDate.ToString("yyyy-MM-dd")</td>
+                    <td>@expiryDate.ToString("yyyy-MM-dd")</td>
+                    <td>@(expiryDate - issueDate).Days</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+

@@ -1,0 +1,36 @@
+﻿@page
+@model LibraryMs.Pages.AddStudentModel
+@{
+    ViewData["Title"] = "Add Student";
+}
+<div>
+    <center><h2>Add Student</h2></center>
+</div>
+
+<div >
+    <center>
+    <form method="post">
+        <label for="name" >Student Name</label>
+        <input type="text" name="name" required />
+        <br /><br />
+        <label for="id" >Student Id</label>
+        <input type="text" name="id" required />
+        <br /><br />
+        <label for="Dept">Department</label>
+        <input type="text" name="Dept" required />
+        <br /><br />
+        <label for="mbl">Mobile Number</label>
+        <input type="number" name="mobile" required />
+        <br /><br />
+        <label for="mail">Email Id</label>
+        <input type="email" name="email" required />
+        <br /><br />
+
+
+        <button type="submit" class="btn btn-primary">Add Student</button>
+       
+    </form>
+        </ center>
+</div>
+
+

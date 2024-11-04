@@ -1,0 +1,55 @@
+﻿@page
+@model LibraryMs.Pages.ViewStudentModel
+@{
+    ViewData["Title"] = "All Students";
+}
+
+<div class="text-center mb-4">
+    <h2>All Students</h2>
+</div>
+
+<div class="container">
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">@TempData["Message"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Department</th>
+                <th>Added on</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.Students)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.Mobile</td>
+                    <td>@student.Department</td>
+                    <td>
+                        @(student.StudentAdded.HasValue ? student.StudentAdded.Value.ToString("yyyy-MM-dd") : "N/A")
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="RemoveStudent">
+                            <input type="hidden" name="studentId" value="@student.Id" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to remove this student?');">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

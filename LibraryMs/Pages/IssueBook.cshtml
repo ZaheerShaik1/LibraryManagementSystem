@@ -1,0 +1,79 @@
+﻿@* @page
+@model LibraryMs.Pages.IssueBookModel
+@{
+    ViewData["Title"] = "Issue Book";
+}
+
+<div>
+    <center><h2>Issue Book</h2></center>
+</div>
+
+<div>
+<form method="post">
+    <label for="Sname">Student Name</label>
+    <input type="text" name="Sname" required />
+    <br />
+    <br />
+    <label for="id">Student Id</label>
+    <input type="text" name="id" required />
+    <br />
+    <br />
+    <label for="Book">Book Name</label>
+    <input type="text" name="Book" required />
+    <br />
+    <br />
+    <label for="bookid">Book ID</label>
+    <input type="number" name="bookid" required />
+    <br />
+    <br />
+
+    <label for="Duration">Duration(Days)</label>
+    <input type="number" name="Duration" required />
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Issue Book</button>
+
+
+</form>
+</div> *@
+
+
+@page
+@model LibraryMs.Pages.IssueBookModel
+@{
+    ViewData["Title"] = "Issue Book";
+}
+
+<div>
+    <center><h2>Issue Book</h2></center>
+</div>
+
+<div>
+    <form method="post">
+        <label for="id">Student:</label>
+        <select name="id" required>
+            <option value="">Select a student</option>
+            @foreach (var student in Model.AvailableStudents)
+            {
+                <option value="@student.Id">@student.Name</option>
+            }
+        </select>
+        <br /><br />
+
+        <label for="bookid">Book:</label>
+        <select name="bookid" required>
+            <option value="">Select a book</option>
+            @foreach (var book in Model.AvailableBooks)
+            {
+                <option value="@book.Id">@book.Title</option>
+            }
+        </select>
+        <br /><br />
+
+        <label for="Duration">Duration (Days):</label>
+        <input type="number" name="Duration" required />
+        <br /><br />
+
+        <button type="submit" class="btn btn-primary">Issue Book</button>
+    </form>
+</div>

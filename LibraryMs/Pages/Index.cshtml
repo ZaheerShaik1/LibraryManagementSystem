@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Library Management System</h1>
+</div>
+<br />
+<br />
+
+<div class="text-center mt-4">
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Page("/Book")'">Book Entry</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Page("/ViewBooks")'">View Books</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Page("/AddStudent")'">Add Student</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Page("/ViewStudent")'">View Students</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Page("/IssueBook")'">Issue a Book</button>
+</div>

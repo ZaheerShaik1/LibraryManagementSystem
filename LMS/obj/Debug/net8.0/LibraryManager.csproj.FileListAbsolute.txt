@@ -1,0 +1,14 @@
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LibraryManager.deps.json
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LibraryManager.runtimeconfig.json
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LibraryManager.dll
+C:\Users\shaik\source\repos\LibraryMs\LMS\bin\Debug\net8.0\LibraryManager.pdb
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.csproj.AssemblyReference.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.AssemblyInfoInputs.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.AssemblyInfo.cs
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.csproj.CoreCompileInputs.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.dll
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\refint\LibraryManager.dll
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.pdb
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\LibraryManager.genruntimeconfig.cache
+C:\Users\shaik\source\repos\LibraryMs\LMS\obj\Debug\net8.0\ref\LibraryManager.dll
